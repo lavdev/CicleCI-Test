@@ -7,7 +7,8 @@
  * @param {*} product 
  * @param {*} amount 
  */
-export default function sellProduct(product, amount){
+export default function sellProduct(product, amount, sellValue=0.00){
     product.stock -= amount;
+    product.sellValue = sellValue;
     return product;
 }
